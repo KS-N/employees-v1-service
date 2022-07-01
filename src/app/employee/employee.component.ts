@@ -9,7 +9,7 @@ import { EmployeeService } from './service/employee.service';
   styleUrls: ['./employee.component.scss'],
 })
 export class EmployeeComponent implements OnInit {
-  employees$: Observable<EmployeeModel[]>;
+  employees$!: Observable<EmployeeModel[]>;
 
   title = 'Employee Page';
 
@@ -21,7 +21,5 @@ export class EmployeeComponent implements OnInit {
 
   getEmployee() {
     this.employees$ = this.service.getEmployee();
-    //typeof this.employees = EmployeeModel[]
-    //typeof this.service.getEmployee() is Observable<EmployeeMoel[]>
   }
 }

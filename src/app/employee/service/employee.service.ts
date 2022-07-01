@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { employees } from '../mock/employee.mock';
 import { EmployeeModel } from './employee.model';
 
 @Injectable({
@@ -12,6 +13,7 @@ export class EmployeeService {
   constructor(private http: HttpClient) {}
 
   getEmployee(): Observable<EmployeeModel[]> {
-    return this.http.get<EmployeeModel[]>(this.url);
+    return of(employees);
+    // return this.http.get<EmployeeModel[]>(this.url);
   }
 }

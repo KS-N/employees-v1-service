@@ -1,4 +1,7 @@
 export interface EmployeeModel {
-  name: string;
   id: string;
+  name: string;
+  phone: string;
+  address: string;
+  designation: string;
 }
