@@ -8,12 +8,11 @@ import { EmployeeModel } from './employee.model';
   providedIn: 'root',
 })
 export class EmployeeService {
-  url: string = 'http://localhost:3000/employees';
+  // url: string = 'http://localhost:3000/employees';
 
   constructor(private http: HttpClient) {}
 
   getEmployee(): Observable<EmployeeModel[]> {
     return of(employees);
-    // return this.http.get<EmployeeModel[]>(this.url);
   }
 }
