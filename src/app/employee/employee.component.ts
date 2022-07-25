@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { EmployeeModel } from './service/employee.model';
-import { GetEmployeesDetails } from './state/employee.actions';
-import { getEmployee } from './state/employee.selectors';
 
 @Component({
   selector: 'app-employee',
@@ -17,7 +15,8 @@ export class EmployeeComponent implements OnInit {
   constructor(private store: Store<EmployeeModel[]>) {}
 
   ngOnInit(): void {
-    this.store.dispatch(new GetEmployeesDetails());
-    this.employees$ = this.store.pipe(select(getEmployee));
+    //   this.store.dispatch(new GetEmployeesDetails());
+    //   this.employees$ = this.store.pipe(select(getEmployee));
+    // }
   }
 }

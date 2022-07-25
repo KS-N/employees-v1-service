@@ -1,8 +1,5 @@
 <h1>{{ title }}</h1>
 
-<div class="p-5 border border-primary" *ngFor="let employee of employees$ | async">
-  <h3>{{ employee.name }}</h3>
-  <h3>{{ employee.address }}</h3>
-  <h3>{{ employee.phone }}</h3>
-  <h3>{{ employee.designation }}</h3>
+<div class="p-5 border border-primary" *ngFor="let employees of employees$ | async">
+  <h3>{{ employees.name }}</h3>
 </div>
